@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:width="32dp" android:height="32dp" /> <!-- Increase the width and height for a larger thumb -->
+    <solid android:color="#45474B" /> <!-- Change this to your desired thumb color -->
+    <corners android:radius="16dp" /> <!-- Set radius to half of width/height for a circular thumb -->
+</shape>

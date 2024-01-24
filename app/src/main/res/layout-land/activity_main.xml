@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayId"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/textview_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.40">
+
+        <TextView
+            android:id="@+id/color_palete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:minWidth="360dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frameLayId"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="350dp"
+        tools:ignore="RedundantNamespace">
+
+        <Switch
+            android:id="@+id/switch_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:theme="@style/redSwitch"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <SeekBar
+            android:id="@+id/seek_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#DC2A2A"
+            android:progressTint="#32D338"
+            android:thumbTint="#BCB4B4" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/textview_border"
+            android:padding="2dp">
+
+            <EditText
+                android:id="@+id/redValBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearGreenLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:minWidth="360dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearRedLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearRedLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearRedLayout"
+        tools:ignore="RedundantNamespace">
+
+        <Switch
+            android:id="@+id/switch_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:theme="@style/greenSwitch"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <SeekBar
+            android:id="@+id/seek_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#DC2A2A"
+            android:progressTint="#32D338"
+            android:thumbTint="#BCB4B4" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/textview_border"
+            android:padding="2dp">
+
+            <EditText
+                android:id="@+id/greenValBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearBlueLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:minWidth="360dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearGreenLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearGreenLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearGreenLayout"
+        tools:ignore="RedundantNamespace">
+
+        <Switch
+            android:id="@+id/switch_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:theme="@style/blueSwitch"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <SeekBar
+            android:id="@+id/seek_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#428AC3"
+            android:progressTint="#478EC5"
+            android:thumbTint="#BCB4B4" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/textview_border"
+            android:padding="2dp">
+
+            <EditText
+                android:id="@+id/blueValBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="35dp"
+        android:minWidth="360dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearBlueLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearBlueLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

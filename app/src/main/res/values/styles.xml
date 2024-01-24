@@ -1,0 +1,11 @@
+<resources>
+    <style name="redSwitch">
+        <item name="colorControlActivated">@android:color/holo_red_light</item>
+    </style>
+    <style name="blueSwitch">
+        <item name="colorControlActivated">@android:color/holo_blue_light</item>
+    </style>
+    <style name="greenSwitch">
+        <item name="colorControlActivated">@android:color/holo_green_light</item>
+    </style>
+</resources>
